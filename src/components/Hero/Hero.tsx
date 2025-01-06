@@ -2,6 +2,12 @@ import Button from "@components/Button/Button";
 
 import CompositionImg from "@assets/components/hero/Rectangle 2.png";
 import CompositionStarIcon from "@assets/components/hero/star.svg";
+import CKLogo from "@assets/components/hero/ck_logo.svg";
+import VersaceLogo from "@assets/components/hero/versace_logo.svg";
+import GucciLogo from "@assets/components/hero/gucci_logo.svg";
+import ZaraLogo from "@assets/components/hero/zara_logo.svg";
+import PradaLogo from "@assets/components/hero/prada_logo.svg";
+
 import style from "./Hero.module.scss";
 
 const Hero = () => {
@@ -62,6 +68,30 @@ const Hero = () => {
           alt=""
         />
       </div>
+
+      <article className={style["hero__brand-block"]}>
+        <img
+          className={style["hero__brand-item"]}
+          src={VersaceLogo}
+          alt="Versace"
+        />
+        <img className={style["hero__brand-item"]} src={ZaraLogo} alt="Zara" />
+        <img
+          className={style["hero__brand-item"]}
+          src={GucciLogo}
+          alt="Gucci"
+        />
+        <img
+          className={style["hero__brand-item"]}
+          src={PradaLogo}
+          alt="Prada"
+        />
+        <img
+          className={style["hero__brand-item"]}
+          src={CKLogo}
+          alt="Calvin Klein"
+        />
+      </article>
     </section>
   );
 };
