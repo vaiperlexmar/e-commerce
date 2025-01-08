@@ -1,0 +1,74 @@
+@use "../../styles/variables";
+
+.items {
+  padding: 0 0 0 1.6rem;
+  margin-bottom: 4rem;
+
+  &__heading {
+    margin-bottom: 3.2rem;
+    text-align: center;
+  }
+  &__list {
+    box-sizing: content-box;
+    display: flex;
+    gap: 1.6rem;
+    list-style-type: none;
+    margin-bottom: 2.8rem;
+    overflow-x: scroll;
+
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+}
+
+.item {
+  font-family: "Satoshi", sans-serif;
+  width: 100%;
+
+  &__img {
+    width: 20rem;
+  }
+
+  &__title {
+    font-size: variables.$paragraph_large;
+    font-weight: bold;
+  }
+
+  &__rating {
+    align-items: center;
+    display: flex;
+    font-size: variables.$paragraph_small;
+    gap: 1.1rem;
+  }
+
+  &__rating-full {
+    color: rgba($color: #000000, $alpha: 0.6);
+  }
+
+  &__price {
+    font-size: variables.$heading-fourth;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  &__price-base {
+    color: rgba($color: #000000, $alpha: 0.6);
+    text-decoration: line-through;
+  }
+
+  &__price-discount {
+    background-color: rgba($color: #ff3333, $alpha: 0.1);
+    border-radius: 6.2rem;
+    color: #ff3333;
+    display: inline-block;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 0.3rem 1rem;
+  }
+}
