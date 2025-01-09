@@ -1,6 +1,7 @@
 import Header from "@components/Header/Header";
 import Hero from "@components/Hero/Hero";
-import ItemsBlock from "./components/ItemsBlock/ItemsBlock";
+import ItemsBlock from "@components/ItemsBlock/ItemsBlock";
+import DressStyle from "@components/DressStyle/DressStyle";
 import { IItem } from "./types";
 
 // Temp Imports
@@ -43,6 +44,7 @@ function App() {
       <ItemsBlock heading="NEW ARRIVALS" items={newArrivals} />
       <hr className="horizontal-rule_section" />
       <ItemsBlock heading="TOP SELLING" items={newArrivals} />
+      <DressStyle />
     </>
   );
 }
