@@ -1,7 +1,6 @@
 @use "../../styles/variables";
 .card {
   background-color: #fff;
-  border: 1px solid salmon;
   border-radius: 2rem;
   display: block;
   margin: 0 auto;
@@ -26,9 +25,9 @@
 .dress-style {
   background-color: #f0f0f0;
   border-radius: 2rem;
-  margin: 0 1.6rem;
-  padding-top: 4rem;
+  margin: 0 1.6rem 5rem;
   padding-bottom: 2.7rem;
+  padding-top: 4rem;
 
   &__heading {
     margin-bottom: 2.8rem;

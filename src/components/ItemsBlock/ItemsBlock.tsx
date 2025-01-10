@@ -23,6 +23,7 @@ const ItemsBlock: FC<Props> = ({ heading, items }) => {
             size={15}
             fillColor={"#FFC633"}
             allowFraction={true}
+            readonly
           />
           <span className={style["item__rating-value"]}>
             {item.rating}/<span className={style["item__rating-full"]}>5</span>

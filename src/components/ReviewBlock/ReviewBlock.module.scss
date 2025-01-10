@@ -1,0 +1,55 @@
+@use "../../styles/variables";
+
+.review-block {
+  padding: 0 1.6rem;
+  margin-bottom: 5rem;
+
+  &__header {
+    display: flex;
+    align-items: end;
+    margin-bottom: 2.4rem;
+  }
+
+  &__heading {
+    width: 73vw;
+  }
+
+  &__controls {
+    display: flex;
+    align-items: center;
+    gap: 1.6rem;
+  }
+
+  &__controls-button {
+    width: 2.4rem;
+    height: 2.4rem;
+    border: 0;
+    background-color: transparent;
+
+    &_left {
+      transform: scale(-1, 1);
+    }
+  }
+}
+
+.review {
+  font-family: "Satoshi", sans-serif;
+  padding: 2.4rem;
+  border: 1px solid rgba($color: #000000, $alpha: 0.1);
+  border-radius: 2rem;
+
+  &__rating {
+    margin-bottom: 1.2rem;
+  }
+
+  &__username {
+    font-weight: bold;
+    margin-bottom: 0.8rem;
+    font-size: variables.$paragraph_large;
+  }
+
+  &__text {
+    font-size: variables.$paragraph_regular;
+    color: rgba($color: #000000, $alpha: 0.6);
+  }
+}

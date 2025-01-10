@@ -3,8 +3,8 @@ import style from "./Button.module.scss";
 
 interface Props {
   additionalClassName?: string;
-  color?: "black" | "white";
-  width?: "narrow" | "wide";
+  color?: "none" | "black" | "white";
+  width?: "custom" | "narrow" | "wide";
   disabled?: boolean;
   onClick?: () => void;
   children?: React.ReactNode;

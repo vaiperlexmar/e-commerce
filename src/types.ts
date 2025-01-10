@@ -11,3 +11,10 @@ export interface IItem {
   imgUrl: string;
   rating: number;
 }
+
+export interface IReview {
+  rating: number;
+  username: string;
+  verified: boolean;
+  text: string;
+}

@@ -1,5 +1,5 @@
 import { FC } from "react";
-import style from "./DressStyle.module.scss";
+import style from "./DressStyleBlock.module.scss";
 
 import dress_style_img_1 from "@assets/components/dress_style/dress_style_img_1.png";
 import dress_style_img_2 from "@assets/components/dress_style/dress_style_img_2.png";

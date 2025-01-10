@@ -4,7 +4,12 @@
   font-size: variables.$paragraph_large;
   border: 0;
   border-radius: 6.2rem;
+  background-color: transparent;
   cursor: pointer;
+
+  &__none {
+    background-color: transparent;
+  }
 
   &__black {
     background-color: #000;
