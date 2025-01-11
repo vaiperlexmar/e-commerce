@@ -7,5 +7,14 @@ $paragraph_large: 1.6rem;
 $paragraph_regular: 1.4rem;
 $paragraph_small: 1.2rem;
 
+$medium_alpha_gray: rgba(
+  $color: #000000,
+  $alpha: 0.6,
+);
+$light_alpha_gray: rgba(
+  $color: #000000,
+  $alpha: 0.1,
+);
+
 $medium_gray: #f0f0f0;
 $light_gray: #f2f0f1;

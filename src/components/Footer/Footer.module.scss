@@ -1,0 +1,73 @@
+@use "../../styles/variables";
+
+.footer {
+  padding: 18.9rem 1.7rem 0;
+  font-family: "Satoshi", sans-serif;
+  background-color: variables.$medium_gray;
+  position: relative;
+
+  &__logo {
+    font-family: "Integral CF", sans-serif;
+    display: inline-block;
+    font-size: 2.885rem;
+    font-weight: bold;
+    margin-bottom: 1.4rem;
+  }
+
+  &__slogan {
+    font-size: variables.$paragraph_regular;
+    color: variables.$medium_alpha_gray;
+    margin-bottom: 2rem;
+  }
+
+  &__social {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    margin-bottom: 2.442rem;
+  }
+
+  &__nav {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 2.4rem;
+    margin-bottom: 4rem;
+  }
+
+  &__nav-list {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+  }
+
+  &__nav-heading {
+    font-size: variables.$paragraph_regular;
+    font-weight: 500;
+    letter-spacing: 0.3rem;
+    line-height: 0.77;
+    text-transform: uppercase;
+    margin-bottom: 1.6rem;
+  }
+
+  &__nav-link {
+    font-size: variables.$paragraph_regular;
+    color: variables.$medium_alpha_gray;
+    text-decoration: none;
+  }
+
+  .horizontal-rule_section {
+    margin-bottom: 1.6rem;
+  }
+
+  &__copyright {
+    text-align: center;
+    color: variables.$medium_alpha_gray;
+    margin-bottom: 1.6rem;
+  }
+
+  &__payments {
+    display: flex;
+    justify-content: center;
+  }
+}

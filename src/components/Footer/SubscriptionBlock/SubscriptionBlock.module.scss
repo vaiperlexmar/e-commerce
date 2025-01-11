@@ -1,15 +1,19 @@
-@use "../../styles/variables";
+@use "../../../styles/variables";
 
 .subscription {
   &__container {
     background-color: black;
     color: white;
-    margin: 0 1.6rem;
     padding: 3.2rem 2.4rem 2.8rem;
+    margin: 0 1.6rem;
     border-radius: 2rem;
+    position: absolute;
+    top: -17%;
+    left: 0;
   }
 
   &__heading {
+    font-family: "Integral CF", sans-serif;
     font-size: variables.$heading_second;
     margin-bottom: 3.2rem;
   }
