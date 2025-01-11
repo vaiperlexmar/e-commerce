@@ -64,6 +64,7 @@ function ReviewBlock() {
         naturalSlideHeight={100}
         totalSlides={reviews.length}
         currentSlide={0}
+        infinite={true}
       >
         <header className={style["review-block__header"]}>
           <h2 className={style["review-block__heading"]}>

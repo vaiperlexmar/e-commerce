@@ -1,29 +1,27 @@
 @use "../../styles/variables";
-
 .button {
-  font-size: variables.$paragraph_large;
+  background-color: transparent;
   border: 0;
   border-radius: 6.2rem;
-  background-color: transparent;
   cursor: pointer;
+  font-family: "Satoshi", sans-serif;
+  font-size: variables.$paragraph_large;
+  font-weight: 500;
 
   &__none {
     background-color: transparent;
   }
-
   &__black {
     background-color: #000;
     color: #fff;
   }
-
   &__white {
     background-color: #fff;
-    color: #000;
     border: 1px solid rgba($color: #000000, $alpha: 0.1);
+    color: #000;
   }
-
   &__wide {
     padding: 1.6rem 5.4rem;
-    width: 91vw;
+    width: 100%;
   }
 }
