@@ -46,7 +46,7 @@
   }
 }
 
-@media (max-width: 480px) {
+@media (min-width: 480px) {
   .dress-style {
     &__heading {
       font-size: variables.$t_heading_second;
