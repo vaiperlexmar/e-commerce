@@ -42,9 +42,11 @@ const ItemsBlock: FC<Props> = ({ heading, items }) => {
     <section className={style["items"]}>
       <h2 className={style["items__heading"]}>{heading}</h2>
       <ul className={style["items__list"]}>{itemsEl}</ul>
-      <Button color="white" width="wide">
-        View All
-      </Button>
+      <div className={style["items__view-all-button-container"]}>
+        <Button color="white" width="wide">
+          View All
+        </Button>
+      </div>
     </section>
   );
 };

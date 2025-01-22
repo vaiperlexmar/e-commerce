@@ -1,7 +1,7 @@
 @use "../../styles/variables";
 
 .footer {
-  padding: 18.9rem 1.7rem 0;
+  padding: 22rem 1.7rem 0;
   font-family: "Satoshi", sans-serif;
   background-color: variables.$medium_gray;
   position: relative;
@@ -69,5 +69,21 @@
   &__payments {
     display: flex;
     justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    &__slogan {
+      font-size: variables.$t_paragraph_regular;
+    }
+
+    &__nav-heading {
+      font-size: variables.$t_paragraph_regular;
+    }
+
+    &__nav-link {
+      font-size: variables.$t_paragraph_regular;
+    }
   }
 }

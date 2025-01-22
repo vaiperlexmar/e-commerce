@@ -1,13 +1,14 @@
 @use "../../styles/variables";
 
 .items {
-  padding: 0 0 0 1.6rem;
   margin-bottom: 4rem;
 
   &__heading {
     margin-bottom: 3.2rem;
     text-align: center;
+    font-size: variables.$heading_second;
   }
+
   &__list {
     box-sizing: content-box;
     display: flex;
@@ -15,6 +16,7 @@
     list-style-type: none;
     margin-bottom: 2.8rem;
     overflow-x: scroll;
+    padding-left: 1.6rem;
 
     -ms-overflow-style: none; /* IE and Edge */
     scrollbar-width: none; /* Firefox */
@@ -23,6 +25,10 @@
       display: none;
     }
   }
+
+  &__view-all-button-container {
+    padding: 0 1.6rem;
+  }
 }
 
 .item {
@@ -30,7 +36,7 @@
   width: 100%;
 
   &__img {
-    width: 20rem;
+    width: 100%;
   }
 
   &__title {
@@ -70,5 +76,31 @@
     font-size: 1rem;
     font-weight: 500;
     padding: 0.3rem 1rem;
+  }
+}
+
+@media (min-width: 480px) {
+  .items {
+    &__heading {
+      font-size: variables.$t_heading_second;
+    }
+  }
+
+  .item {
+    &__title {
+      font-size: variables.$t_paragraph_large;
+    }
+
+    &__rating {
+      font-size: variables.$t_paragraph_small;
+    }
+
+    &__price {
+      font-size: variables.$t_heading-fourth;
+    }
+
+    &__price-discount {
+      font-size: calc(1rem + 0.5vw);
+    }
   }
 }

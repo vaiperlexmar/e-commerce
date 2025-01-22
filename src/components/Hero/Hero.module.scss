@@ -1,4 +1,5 @@
 @use "../../styles/variables";
+
 .hero {
   background-color: variables.$medium_gray;
   font-family: "Satoshi", sans-serif;
@@ -8,20 +9,24 @@
   &__textbox {
     padding: 4rem 1.6rem 0;
   }
+
   &__heading {
     font-family: "Integral CF", sans-serif;
     font-size: variables.$heading_first;
     line-height: 0.95;
     margin-bottom: 2rem;
   }
+
   &__paragraph {
     color: rgba($color: #000000, $alpha: 0.6);
     font-size: variables.$paragraph_regular;
     margin-bottom: 2.4rem;
   }
+
   &__button {
     margin-bottom: 2rem;
   }
+
   &__benefits-list {
     display: flex;
     flex-wrap: wrap;
@@ -30,9 +35,11 @@
     list-style: none;
     position: relative;
   }
+
   &__benefits-item {
     max-width: 30rem;
   }
+
   &__benefits-item:first-child::after {
     background-color: rgba($color: #000000, $alpha: 0.1);
     content: "";
@@ -43,26 +50,32 @@
     transform: translateX(-50%);
     width: 1px;
   }
+
   &__benefits-item:last-child {
     margin-top: 1.2rem;
   }
+
   &__benefits-heading {
     font-size: variables.$heading_third;
     font-weight: 600;
   }
+
   &__benefits-description {
     color: rgba($color: #000000, $alpha: 0.6);
     font-size: variables.$paragraph_small;
     font-weight: 400;
   }
+
   &__composition {
     position: relative;
   }
+
   &__composition-img {
     display: block;
     margin: 0 auto;
     width: 100%;
   }
+
   &__composition-star {
     position: absolute;
     top: 0;
@@ -82,9 +95,63 @@
   &__brand-block {
     background-color: #000000;
     padding: 3.9rem 0;
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-auto-rows: auto;
     justify-content: center;
-    gap: 3.4rem;
+    //gap: 3.4rem;
+    row-gap: 2.2rem;
+  }
+
+  &__brand-item {
+    img {
+      display: block;
+      margin: 0 auto;
+    }
+
+    &:nth-child(-1n + 3) { // Versace, ZARA, GUCCI
+      grid-column: span 4;
+    }
+
+    &:nth-last-child(2) { // Prada
+      grid-row-start: 2;
+      grid-column: 3 / span 4;
+    }
+
+    &:nth-last-child(1) { // CK
+      grid-row-start: 2;
+      grid-column: 8 / span 4;
+    }
+
+    & {
+      //background-color: tomato;
+    }
+  }
+}
+
+@media (min-width: 480px) {
+  .hero {
+    &__heading {
+      font-size: variables.$t_heading_first;
+    }
+
+    &__paragraph {
+      font-size: variables.$t_paragraph_regular;
+    }
+
+    &__benefits-heading {
+      font-size: variables.$t_heading_third;
+    }
+
+    &__benefits-description {
+      font-size: variables.$t_paragraph_small;
+    }
+
+    &__brand-item {
+      img {
+        transform: scale(1.2);
+        transition: 0.3s ease;
+      }
+    }
   }
 }

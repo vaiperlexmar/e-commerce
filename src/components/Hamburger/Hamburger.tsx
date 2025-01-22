@@ -34,7 +34,7 @@ const Hamburger = ({ isOpen, toggle }: Props) => {
     },
     opened: {
       rotate: -45,
-      translateY: -1,
+      translateY: 0,
       translateX: 4,
     },
   };

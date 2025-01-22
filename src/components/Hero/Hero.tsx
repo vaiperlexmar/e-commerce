@@ -70,27 +70,21 @@ const Hero = () => {
       </div>
 
       <article className={style["hero__brand-block"]}>
-        <img
-          className={style["hero__brand-item"]}
-          src={VersaceLogo}
-          alt="Versace"
-        />
-        <img className={style["hero__brand-item"]} src={ZaraLogo} alt="Zara" />
-        <img
-          className={style["hero__brand-item"]}
-          src={GucciLogo}
-          alt="Gucci"
-        />
-        <img
-          className={style["hero__brand-item"]}
-          src={PradaLogo}
-          alt="Prada"
-        />
-        <img
-          className={style["hero__brand-item"]}
-          src={CKLogo}
-          alt="Calvin Klein"
-        />
+        <div className={style["hero__brand-item"]}>
+          <img src={VersaceLogo} alt="Versace" />
+        </div>
+        <div className={style["hero__brand-item"]}>
+          <img src={ZaraLogo} alt="Zara" />
+        </div>
+        <div className={style["hero__brand-item"]}>
+          <img src={GucciLogo} alt="Gucci" />
+        </div>
+        <div className={style["hero__brand-item"]}>
+          <img src={PradaLogo} alt="Prada" />
+        </div>
+        <div className={style["hero__brand-item"]}>
+          <img src={CKLogo} alt="Calvin Klein" />
+        </div>
       </article>
     </section>
   );

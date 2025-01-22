@@ -36,6 +36,19 @@ const newArrivals: IItem[] = [
     imgUrl: ItemImg,
     rating: 4.5,
   },
+  {
+    id: 3,
+    title: "T-shirt with Tape Detals",
+    description: "T-SHIRT WITH TAPE DETAILS",
+    basePrice: 120.99,
+    color: "black",
+    size: "48",
+    count: 10,
+    discount: 15,
+    totalPrice: 102.84,
+    imgUrl: ItemImg,
+    rating: 4.5,
+  },
 ];
 
 function App() {

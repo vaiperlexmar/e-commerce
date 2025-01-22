@@ -25,3 +25,9 @@
     width: 100%;
   }
 }
+
+@media (min-width: 480px) {
+  .button {
+    font-size: variables.$t_paragraph_large;
+  }
+}

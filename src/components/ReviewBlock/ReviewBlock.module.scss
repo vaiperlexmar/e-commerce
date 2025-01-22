@@ -1,4 +1,5 @@
 @use "../../styles/variables";
+
 .review-block {
   margin-bottom: 18.5rem;
   padding: 0 1.6rem;
@@ -8,14 +9,18 @@
     display: flex;
     margin-bottom: 2.4rem;
   }
+
   &__heading {
     width: 73vw;
+    font-size: variables.$heading_second;
   }
+
   &__controls {
     align-items: center;
     display: flex;
     gap: 1.6rem;
   }
+
   &__controls-button {
     background-color: transparent;
     border: 0;
@@ -27,6 +32,7 @@
     }
   }
 }
+
 .review {
   border: 1px solid rgba($color: #000000, $alpha: 0.1);
   border-radius: 2rem;
@@ -36,13 +42,32 @@
   &__rating {
     margin-bottom: 1.2rem;
   }
+
   &__username {
     font-size: variables.$paragraph_large;
     font-weight: bold;
     margin-bottom: 0.8rem;
   }
+
   &__text {
     color: rgba($color: #000000, $alpha: 0.6);
     font-size: variables.$paragraph_regular;
+  }
+}
+
+@media (min-width: 480px) {
+  .review-block {
+    &__heading {
+      font-size: variables.$t_heading_second;
+    }
+  }
+  .review {
+    &__username {
+      font-size: variables.$t_paragraph_large;
+    }
+
+    &__text {
+      font-size: variables.$t_paragraph_regular;
+    }
   }
 }

@@ -1,6 +1,7 @@
+@use "../../styles/variables";
+
 .nav {
   background-color: white;
-  border: 1px solid salmon;
   left: 50%;
   position: absolute;
   transform: translateX(-50%);
@@ -20,8 +21,11 @@
     width: 100%;
   }
   li {
-    border: 1px solid salmon;
     padding: 1rem 0;
     width: 100%;
+
+    &:not(:last-child) {
+      border-bottom: 1px solid variables.$light_alpha_gray;
+    }
   }
 }
