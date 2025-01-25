@@ -3,9 +3,10 @@ import style from "@components/Nav/Nav.module.scss";
 
 interface Props {
   isHamburgerOpen: boolean;
+  isMobile: boolean;
 }
 
-const Nav = ({ isHamburgerOpen }: Props) => {
+const Nav = ({ isHamburgerOpen, isMobile }: Props) => {
   const variant = isHamburgerOpen ? "opened" : "closed";
   const animation = {
     closed: {
@@ -22,32 +23,40 @@ const Nav = ({ isHamburgerOpen }: Props) => {
     },
   };
 
-  return (
-    <motion.nav className={style.nav} variants={animation} animate={variant}>
-      <ul>
-        <li>
-          <a className="link nav-link" href="#">
-            Shop
-          </a>
-        </li>
-        <li>
-          <a className="link nav-link" href="#">
-            On sale
-          </a>
-        </li>
-        <li>
-          <a className="link nav-link" href="#">
-            New Arrivals
-          </a>
-        </li>
-        <li>
-          <a className="link nav-link" href="#">
-            Brands
-          </a>
-        </li>
-      </ul>
-    </motion.nav>
+  const NavListElement = (
+    <ul>
+      <li>
+        <a className="link nav-link" href="#">
+          Shop
+        </a>
+      </li>
+      <li>
+        <a className="link nav-link" href="#">
+          On sale
+        </a>
+      </li>
+      <li>
+        <a className="link nav-link" href="#">
+          New Arrivals
+        </a>
+      </li>
+      <li>
+        <a className="link nav-link" href="#">
+          Brands
+        </a>
+      </li>
+    </ul>
   );
+
+  const NavElement = isMobile ? (
+    <motion.nav className={style.nav} variants={animation} animate={variant}>
+      {NavListElement}
+    </motion.nav>
+  ) : (
+    <nav className={style.nav}>{NavListElement}</nav>
+  );
+
+  return NavElement;
 };
 
 export default Nav;

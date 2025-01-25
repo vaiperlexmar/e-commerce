@@ -29,3 +29,20 @@
     }
   }
 }
+
+@media (min-width: 768px) {
+  .header {
+    justify-content: space-between;
+    padding: 2.4rem 7vw 1.5rem;
+    flex-shrink: 0;
+
+    &__logo {
+      margin: 0;
+      order: -1;
+    }
+
+    &__actions {
+      order: 1;
+    }
+  }
+}

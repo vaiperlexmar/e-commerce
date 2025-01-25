@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import Nav from "@components/Nav/Nav";
 import Hamburger from "../Hamburger/Hamburger";
@@ -11,15 +11,29 @@ import style from "./Header.module.scss";
 
 const Header = () => {
   const [isHamburgerOpen, setIsHamburgerOpen] = useState(false);
+  const [width, setWidth] = useState<number>(window.innerWidth);
 
   function toggleHamburger() {
     setIsHamburgerOpen(!isHamburgerOpen);
   }
 
+  function handleWindowSizeChange() {
+    setWidth(window.innerWidth);
+  }
+
+  useEffect(() => {
+    window.addEventListener("resize", handleWindowSizeChange);
+    return () => {
+      window.removeEventListener("resize", handleWindowSizeChange);
+    };
+  }, []);
+
+  const isMobile = width <= 767;
+
   return (
     <header className={style.header}>
       <Hamburger isOpen={isHamburgerOpen} toggle={toggleHamburger} />
-      <Nav isHamburgerOpen={isHamburgerOpen} />
+      <Nav isHamburgerOpen={isHamburgerOpen} isMobile={isMobile} />
       <span className={style.header__logo}>SHOP.CO</span>
       <div className={style.header__actions}>
         <a className="header__action header__action_search">
